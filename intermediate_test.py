@@ -6,7 +6,10 @@ def add_to_list(numbers):
     Return:
     - The modified list.
     """
-    pass
+    number = 6
+    numbers.append(number)
+    return numbers
+    
 
 
 def remove_from_list(numbers):
@@ -17,7 +20,11 @@ def remove_from_list(numbers):
     Return:
     - The modified list.
     """
-    pass
+    for number in numbers:
+        if number == 3:
+            numbers.remove(number)
+    return numbers
+    
 
 
 def insert_at_beginning(numbers):
@@ -28,7 +35,13 @@ def insert_at_beginning(numbers):
     Return:
     - The modified list.
     """
-    pass
+    new_list = []
+    zero = 0
+    new_list.append(zero)
+    for number in numbers:
+        new_list.append(number)
+    return new_list
+    
 
 
 def reverse_list(numbers):
@@ -39,7 +52,11 @@ def reverse_list(numbers):
     Return:
     - The reversed list.
     """
-    pass
+    reverse = []
+    for number in reversed(numbers):
+        reverse.append(number)
+    return reverse
+    
 
 
 def create_new_tuple(t):
@@ -50,7 +67,8 @@ def create_new_tuple(t):
     Return:
     - The new tuple with the first two elements.
     """
-    pass
+    new_tuple = (t[0],t[1])
+    return new_tuple
 
 
 def check_if_value_exists(t, value):
@@ -61,7 +79,11 @@ def check_if_value_exists(t, value):
     Return:
     - True if the value exists, otherwise False.
     """
-    pass
+    if value in t:
+        return True
+    else:
+        return False
+    
 
 
 def find_intersection(set1, set2):
@@ -72,7 +94,7 @@ def find_intersection(set1, set2):
     Return:
     - The intersection of the two sets.
     """
-    pass
+    return set1.intersection(set2)
 
 
 def find_union(set1, set2):
@@ -83,7 +105,7 @@ def find_union(set1, set2):
     Return:
     - The union of the two sets.
     """
-    pass
+    return set1.union(set2)
 
 
 def find_difference(set1, set2):
@@ -94,7 +116,7 @@ def find_difference(set1, set2):
     Return:
     - The difference between the two sets.
     """
-    pass
+    return set1.difference(set2)
 
 
 def add_student(student_grades):
@@ -105,7 +127,8 @@ def add_student(student_grades):
     Return:
     - The updated dictionary with the new student.
     """
-    pass
+    student_grades['David'] = 92
+    return student_grades
 
 
 def change_bob_grade(student_grades):
@@ -116,7 +139,9 @@ def change_bob_grade(student_grades):
     Return:
     - The updated dictionary with Bob’s grade changed.
     """
-    pass
+    student_grades["Bob"] = 95
+    return student_grades
+    
 
 
 def delete_charlie(student_grades):
@@ -127,7 +152,9 @@ def delete_charlie(student_grades):
     Return:
     - The updated dictionary with Charlie removed.
     """
-    pass
+    del student_grades["Charlie"]
+    return student_grades
+    
 
 
 def retrieve_alice_grade(student_grades):
@@ -138,4 +165,7 @@ def retrieve_alice_grade(student_grades):
     Return:
     - Alice's grade.
     """
-    pass
+    grade = student_grades["Alice"]
+    return grade
+    
+# print(reverse_list([1,2,3,4,5,6]))
